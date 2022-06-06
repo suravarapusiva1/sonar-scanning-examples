@@ -1,9 +1,14 @@
 pipeline{
     agent any
     stages{
+        stage("checkout stage"){
+            steps{
+               git_repo_url:"https://github.com/kallepallinaveen/sonar-scanning-examples.git",git_repo_br:"master"
+            }
+        }
         stage("build stage"){
             steps{
-                sh "cd sonar-scanning-examples/sonarqube-scanner-maven/maven-basic/;mvn clean install"
+                sh "cd sonar-scanning-examples/sonarqube-scanner-maven/maven-basic/git;mvn clean install"
             }
         }
     }
