@@ -3,7 +3,7 @@ pipeline{
     stages{   
         stage("build stage"){
             steps{
-                sh "cd sonar-scanning-examples/sonarqube-scanner-maven/maven-basic/git;mvn clean install"
+                sh "cd sonarqube-scanner-maven/maven-basic/git;mvn clean install"
             }
         }
     }
