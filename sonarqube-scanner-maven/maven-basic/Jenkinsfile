@@ -19,7 +19,7 @@ pipeline{
                 withSonarQubeEnv('sonarserver 9.5') {
                 sh "mvn clean verify sonar:sonar \
                     -Dsonar.projectKey=siva \
-                    -Dsonar.host.url=http://54.83.108.200:8081 \
+                    -Dsonar.host.url=http://54.196.160.119:8081\
                     -Dsonar.login=sqp_f2a22e58e8f85d544c102f570e175f23da84470e"
                 }
             }
