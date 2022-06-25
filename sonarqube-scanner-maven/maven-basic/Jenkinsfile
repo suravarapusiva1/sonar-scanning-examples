@@ -18,7 +18,7 @@ pipeline{
             steps {
                 withSonarQubeEnv('sonarserver 9.5') {
 
-                sh  "mvn -f sonarqube-scanner-maven/maven-basic pom.xml verify "
+                sh  "mvn -f sonarqube-scanner-maven/maven-basic pom.xml verify sonar:sonar "
                 /*sh "mvn clean verify sonar:sonar \
                     -Dsonar.projectKey=siva \
                     -Dsonar.host.url=http://54.196.160.119:8081/ \
